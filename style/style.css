@@ -160,12 +160,14 @@ nav-post-button within the nav-button
 
 #timestamp {}
 
-/* #container {
-  background-color: black;
-  max-width: auto;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-} */
+a.post-click {
+    text-decoration: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #004186;
+    border: 1px solid #004186;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
