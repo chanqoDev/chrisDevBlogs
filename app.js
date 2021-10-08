@@ -13,7 +13,7 @@ app.get("/api/posts/:post_id", (req, res) => {
   if (foundPost) {
     res.status(200).send(foundPost);
   } else {
-    res.status(404).send("Not Found");
+    res.status(404).send("Not Found!");
   }
 });
 
