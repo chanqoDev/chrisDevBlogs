@@ -3,10 +3,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.post-link {
-    text-decoration: none;
-}
-
 header {
     min-height: 350px;
     background-size: cover;
@@ -16,22 +12,63 @@ header {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    ;
 }
 
-.home-page header,
-.new-post-page header {
+.home-page header, .new-post-page header  {
     background-image: url(/assets/banner.jpeg);
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    padding: .375rem .75rem;
+    color: #004186;
+    border: 1px solid #004186;
+    border-radius: 5px;
+}
+
+.add-post a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-button {
+    cursor: pointer;
 }
 
 header::before {
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(0, 0, 0, 0.7);
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-button.new-post-button {
+    position: fixed;
+    font-size: 24px;
+    z-index: 10;
+    bottom: 30px;
+    right: 30px;
+    background-color: #004186;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-button.new-post-buton:hover {
+    background-color: #002349;
 }
 
 .header-container {
@@ -47,56 +84,56 @@ header::before {
 }
 
 .profile-image {
-    border: 4px solid whitesmoke;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background-color: white;
     border-radius: 50%;
     background-image: url(/assets/profile.png);
     background-size: cover;
 }
 
-.add-post a {
-    color: white;
-    text-decoration: none;
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
 }
 
-.nav-button {
-    cursor: pointer;
+.title {
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .subtext {
-    max-width: 400px;
+    margin-top: 8px;
+    text-align: center;
 }
 
 .main {
-    margin-top: 32px;
     display: flex;
-    justify-content: center;
 }
 
 .main-container {
+    width: 100%;
     max-width: 750px;
     min-width: 600px;
     padding-left: 16px;
     padding-right: 16px;
-    width: 100%;
 }
 
 .post {
     display: flex;
     border: 1px solid #eaecee;
     border-radius: 8px;
-    min-height: 200px;
-    overflow: hidden;
-    transition: all 0.25s ease;
-    cursor: pointer;
     margin-top: 24px;
+    overflow: hidden;
+    min-height: 200px;
+    transition: all .25s ease;
+    cursor: pointer;
 }
 
 .post:hover {
-    transform: translate3d(0, -5px, 0);
-    box-shadow: 0 2rem 5rem 0 rgb(0, 0, 0, .1);
+    transform: translate3d(0,-5px,0);
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,.1);
 }
 
 .post-image {
@@ -114,12 +151,12 @@ header::before {
 .post-date {
     font-size: 12px;
     color: #adb5bd;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 .post-title {
-    margin-top: 16px;
     font-size: 1.5em;
+    padding-top: 16px;
     padding-bottom: 4px;
     color: #333;
 }
@@ -129,12 +166,8 @@ header::before {
 }
 
 .post-text {
-    /* margin-top: 4px;
-    color: #495057;
-    font-weight: 400;
-    line-height: 1.4; */
-    max-height: 65px;
     overflow: hidden;
+    max-height: 65px;
 }
 
 .post-text p {
@@ -144,6 +177,10 @@ header::before {
     line-height: 1.4;
     margin: 0;
     word-break: break-all;
+}
+
+.subtext {
+    max-width: 400px;
 }
 
 footer {
@@ -156,49 +193,3 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
-
-.nav-button.new-post-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    background-color: #004186;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
-    transition: all 0.25s ease;
-}
-
-.nav-button.new-post-button:hover {
-    background-color: #002349;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #333;
-    padding: .375rem .75rem;
-    color: #004186;
-    border: 1px solid #004186;
-    border-radius: 5px;
-}
-
-.title {
-    font-size: 3em;
-    font-weight: bold;
-}
-
-.subtext {
-    margin-top: 8px;
-    text-align: center;
-}
-
-.main {
-    display: flex;
-}
-
- 
