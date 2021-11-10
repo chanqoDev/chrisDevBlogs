@@ -15,7 +15,7 @@ header {
 }
 
 .home-page header, .new-post-page header  {
-    background-image: url(/assets/banner.jpeg);
+    background-image: url(../assets/banner.jpeg);
 }
 
 .post-link {
@@ -84,12 +84,14 @@ header::before {
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
     background-color: white;
     border-radius: 50%;
-    background-image: url(/assets/profile.png);
+    background-image: url(../assets/profile.png);
     background-size: cover;
+    border: solid white 2px;
+    margin-bottom: 10px;
 }
 
 .main {
@@ -138,7 +140,7 @@ header::before {
 
 .post-image {
     flex-basis: 40%;
-    background-size: cover;
+     background-size: cover;
     background-position: center;
 }
 
